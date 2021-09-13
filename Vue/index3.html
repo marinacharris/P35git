@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="aplicacion" class="container">
+       <table class="table table-striped">
+           <tr>
+               <th>Id</th>
+               <th>Nombre Completo</th>
+               <th>Teléfono</th>
+           </tr>
+           <template v-for="persona in datos">
+                <tr>
+                    <td>{{persona.id}}</td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.telefono}}</td>
+                </tr>
+           </template>
+           
+       </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el:'#aplicacion',
+            data:{
+                datos:[
+                    {
+                    id: 32589748,
+                    nombre: 'Juan Castro',
+                    telefono: 3001589658
+                    },
+                    {
+                    id: 31229748,
+                    nombre: 'María Pérez',
+                    telefono: 3000000658
+                    },
+                    {
+                    id: 8596874,
+                    nombre: 'Diana Díaz',
+                    telefono: 3150000658
+                    }
+                ]
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</body>
+</html>
